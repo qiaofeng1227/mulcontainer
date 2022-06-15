@@ -1,5 +1,5 @@
 #!/bin/sh
 exec 2>&1
 
-cd /usr/local/tomcat
-exec chpst -P /usr/local/tomcat/catalina.sh run
+cd /usr/local/tomcat2
+exec chpst -P /usr/local/tomcat2/catalina.sh run

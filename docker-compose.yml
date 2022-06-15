@@ -1,6 +1,6 @@
 services:
 
-  nginx:
+  tomcats:
     container_name: tomcats
     image: multomcat:2.0
     restart: always

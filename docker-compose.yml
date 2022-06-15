@@ -1,0 +1,12 @@
+services:
+
+  nginx:
+    container_name: tomcats
+    image: multomcat:2.0
+    restart: always
+    ports:
+       - '9009:80'
+       - '9001:8080'
+       - '9002:8090'
+
+

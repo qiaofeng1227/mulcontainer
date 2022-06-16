@@ -4,7 +4,6 @@ services:
 
   tomcats:
     container_name: tomcats
-    build: .
     image: mtomcat
     restart: always
     ports:

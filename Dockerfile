@@ -162,6 +162,8 @@ COPY server.xml /usr/local/tomcat2/conf/
 COPY catalina.sh /usr/local/tomcat2/bin/
 COPY tomcat1/ /opt/service/tomcat1/
 COPY tomcat2/ /opt/service/tomcat2/
+COPY ROOT/ /usr/local/tomcat/webapps/
+COPY ROOT/ /usr/local/tomcat2/webapps/
 
 RUN chmod +x /opt/service/tomcat1/run /opt/service/tomcat2/run /usr/local/tomcat2/bin/catalina.sh /usr/local/tomcat/bin/catalina.sh
 

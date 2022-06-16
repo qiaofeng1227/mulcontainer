@@ -2,4 +2,4 @@
 exec 2>&1
 
 cd /usr/local/tomcat2
-exec chpst -P /usr/local/tomcat2/catalina.sh run
+exec chpst -P /usr/local/tomcat2/bin/catalina.sh run

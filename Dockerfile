@@ -31,7 +31,6 @@ RUN set -eux; \
 		ca-certificates \
 		curl \
                 nginx \
-                runit \
 		dirmngr \
 		gnupg \
 	; \
@@ -150,7 +149,9 @@ RUN set -eux; \
 
 COPY start.sh /usr/bin/start.sh
 
-RUN mkdir /usr/local/tomcat2; \
+RUN apt update; \
+    apt install -y runit; \
+    mkdir /usr/local/tomcat2; \
     chmod +x /usr/bin/start.sh; \
     mkdir /opt/service; \
     ls /opt; \

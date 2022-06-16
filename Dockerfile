@@ -156,7 +156,9 @@ RUN apt update; \
     mkdir /opt/service; \
     ls /opt; \
     cp -r /usr/local/tomcat/* /usr/local/tomcat2; \
-    rm -f /usr/local/tomcat2/conf/server.xml /usr/local/tomcat2/bin/catalina.sh
+    rm -f /usr/local/tomcat2/conf/server.xml /usr/local/tomcat2/bin/catalina.sh; \
+    cd /usr/local/tomcat2 and cp -r webapps.dist/ webapps*; \
+    cd /usr/local/tomcat and cp -r webapps.dist/ webapps*; \
 
 COPY server.xml /usr/local/tomcat2/conf/
 COPY catalina.sh /usr/local/tomcat2/bin/

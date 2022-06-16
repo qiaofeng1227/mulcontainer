@@ -167,5 +167,5 @@ RUN cat /usr/bin/start.sh
 
 EXPOSE 8080 8090 80
 
-CMD ["catalina.sh","run"]
-#CMD ["/usr/bin/start.sh"]
+#CMD ["catalina.sh","run"]
+CMD ["/usr/bin/start.sh"]

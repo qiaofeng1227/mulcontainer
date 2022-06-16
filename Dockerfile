@@ -157,13 +157,15 @@ RUN apt update; \
     ls /opt; \
     cp -r /usr/local/tomcat/* /usr/local/tomcat2; \
     rm -f /usr/local/tomcat2/conf/server.xml /usr/local/tomcat2/bin/catalina.sh; \
-    cd /usr/local/tomcat2 and cp -r webapps.dist/ webapps*; \
-    cd /usr/local/tomcat and cp -r webapps.dist/ webapps*; \
+    mkdir /usr/local/tomcat2/webapps/ROOT; \
+    mkdir /usr/local/tomcat/webapps/ROOT
 
 COPY server.xml /usr/local/tomcat2/conf/
 COPY catalina.sh /usr/local/tomcat2/bin/
 COPY tomcat1/ /opt/service/tomcat1/
 COPY tomcat2/ /opt/service/tomcat2/
+COPY index.jsp /usr/local/tomcat/webapps/ROOT/
+COPY index.jsp /usr/local/tomcat2/webapps/ROOT/
 
 RUN chmod +x /opt/service/tomcat1/run /opt/service/tomcat2/run /usr/local/tomcat2/bin/catalina.sh /usr/local/tomcat/bin/catalina.sh
 

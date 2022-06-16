@@ -5,7 +5,7 @@ services:
   tomcats:
     container_name: tomcats
     build: .
-    image: tomcats:latest
+    image: tomcats
     restart: always
     ports:
        - '9009:80'

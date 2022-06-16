@@ -163,7 +163,7 @@ COPY catalina.sh /usr/local/tomcat2/bin/
 COPY tomcat1/ /opt/service/tomcat1/
 COPY tomcat2/ /opt/service/tomcat2/
 
-RUN cat /usr/bin/start.sh
+RUN chmod +x /opt/service/tomcat1/run /opt/service/tomcat2/run
 
 EXPOSE 8080 8090 80
 
